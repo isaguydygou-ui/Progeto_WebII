@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>160</x><y>96</y><w>648</w><h>496</h></coordinates><panel_attributes>«package»</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>176</x><y>144</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P1 — Admissão
+de Associados
+Formulários · Aprovação
+Registo · Notificação</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>400</x><y>152</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P2 — Quotas
+e Pagamentos
+Pagamento · Confirmação
+Recibos digitais</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>616</x><y>152</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P3 — Atividades
+Prof. Desenvolvimento
+Publicação · Inscrição
+Aprovação · Notificação</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>176</x><y>280</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P4 — Controlo
+Financeiro
+Emissão de recibos
+Relatórios fin.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>400</x><y>280</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P5 — Dashboard
+e Monitorização
+KPIs · Gráficos · Alertas
+Exportação PDF/Excel</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>616</x><y>280</y><w>136</w><h>72</h></coordinates><panel_attributes>«package»
+--
+P6 — Gestão
+Utilizadores
+Contas · Perfis
+Permissões</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>168</x><y>384</y><w>632</w><h>136</h></coordinates><panel_attributes>«package»
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>320</x><y>432</y><w>96</w><h>56</h></coordinates><panel_attributes>Notificações             
+E-mail · SMS
+In-app
+alertas auto.
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>192</x><y>432</y><w>104</w><h>56</h></coordinates><panel_attributes>Workflow                   
+Motor de                      
+estados
+e transições.
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>440</x><y>432</y><w>96</w><h>56</h></coordinates><panel_attributes>Log Auditoria           
+Sessões
+Ações
+Histórico
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>560</x><y>432</y><w>112</w><h>56</h></coordinates><panel_attributes>Auth  
+Login seguro                
+JWT/Sessão              
+Recuperação
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>696</x><y>432</y><w>96</w><h>56</h></coordinates><panel_attributes>Eventos
+Pub/Sub
+Triggers
+Integração
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>168</x><y>528</y><w>632</w><h>56</h></coordinates><panel_attributes>Legenda
+Processo em foco     (P5)  «uses» (dependência)  ronteira partilhada</panel_attributes><additional_attributes></additional_attributes></element></diagram>

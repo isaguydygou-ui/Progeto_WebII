@@ -1,0 +1,162 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>648</x><y>0</y><w>102</w><h>150</h></coordinates><panel_attributes>Utilizador
+
+--
++int id
+
++String nome
+
++String email
+
++String passwordHash
+
++String perfil
+
++String divisao
+
++Boolean ativo
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>366</x><y>24</y><w>90</w><h>204</h></coordinates><panel_attributes>Dashboard
+--
+Dashboard
+
++int id
+
++String titulo
+
++String periodo
+
++String divisao
+
++Date ultimaAtualizacao
+--
++carregarKPIs()
+
++aplicarFiltro()
+
++exportarPDF()
+
++exportarExcel()
+
++emitirAlertas()
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>258</x><y>336</y><w>90</w><h>150</h></coordinates><panel_attributes>Grafico
+--
++int id
+
++String tipo
+
++String titulo
+
++Object dados
+
++String formato
+
++renderizar()
+
++atualizar()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>438</x><y>324</y><w>90</w><h>162</h></coordinates><panel_attributes>Alerta
+--
++int id
+
++String tipo
+
++String mensagem
+
++String nivel
+
++Date dataEmissao
+
++Boolean resolvido
+
++emitir()
+
++resolver()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>336</y><w>90</w><h>156</h></coordinates><panel_attributes>KPI
+--
++int id
+
++String nome
+
++String area
+
++float valor
+
++String unidade
+
++Date timestamp
+
++calcular()
+
++atualizar()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>348</y><w>90</w><h>138</h></coordinates><panel_attributes>RelatorioExportado
+--
++int id
+
++String formato
+
++String caminho
+
++Date dataGeracao
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>324</y><w>90</w><h>162</h></coordinates><panel_attributes>LogAuditoria
+--
++int id
+
++int utilizadorId
+
++String acao
+
++String entidade
+
++Date timestamp
+
++String ip
+
++registar()
+
++consultar()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>54</y><w>234</w><h>294</h></coordinates><panel_attributes>lt=-
+m1=  *
+m2=1
+&lt;apresenta</panel_attributes><additional_attributes>10;470;370;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>108</y><w>108</w><h>240</h></coordinates><panel_attributes>lt=-
+m1= *
+m2=1
+&lt; cotem</panel_attributes><additional_attributes>10;380;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>102</y><w>60</w><h>234</h></coordinates><panel_attributes>lt=-
+m1= *
+m2=1
+&lt; exibe</panel_attributes><additional_attributes>60;370;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>60</y><w>204</w><h>300</h></coordinates><panel_attributes>lt=-
+m1= *
+m2=1
+&lt; gera</panel_attributes><additional_attributes>320;480;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>54</y><w>342</w><h>276</h></coordinates><panel_attributes>lt=-
+m1= *
+m2=1
+&lt; registra em</panel_attributes><additional_attributes>550;440;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>108</x><y>396</y><w>72</w><h>210</h></coordinates><panel_attributes>lt=&lt;.
+agrega dados</panel_attributes><additional_attributes>30;330;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>576</y><w>126</w><h>216</h></coordinates><panel_attributes>
+Associado
+
+
+--
+
++int id
+
++String nome
+
++String tipo
+
++String estado
+
++Date dataAdmissao
+
+-
+
++submeterCandidatura()
+
++pagarQuota()
+
++inscreverAtividade()
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
