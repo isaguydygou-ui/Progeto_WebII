@@ -1,0 +1,135 @@
+@startuml Gestão de Utilizadores e Controlo de Acessos
+
+skinparam classBackgroundColor #EEEDFE
+skinparam classBorderColor #534AB7
+skinparam classHeaderBackgroundColor #534AB7
+skinparam classHeaderFontColor #FFFFFF
+skinparam ArrowColor #534AB7
+skinparam packageBackgroundColor #F1EFE8
+skinparam packageBorderColor #888780
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+
+package "Gestão de Utilizadores e Controlo de Acessos" {
+
+  class Utilizador {
+    - id : Integer
+    - nome : String
+    - email : String
+    - password : String
+    - perfil : PerfilEnum
+    - divisao : String
+    - estado : EstadoEnum
+    - tentativas_login : Integer
+    - bloqueado_ate : DateTime
+    - token_reset : String
+    - token_reset_expira : DateTime
+    - ultimo_acesso : DateTime
+    - criado_em : DateTime
+    - atualizado_em : DateTime
+    --
+    + verificarPassword(password: String) : Boolean
+    + estaBloqueado() : Boolean
+    + resetarTentativas() : void
+    + bloquearConta(minutos: Integer) : void
+  }
+
+  class LogAuditoria {
+    - id : Integer
+    - utilizador_id : Integer
+    - utilizador_nome : String
+    - acao : String
+    - detalhe : String
+    - ip : String
+    - modulo : String
+    - resultado : ResultadoEnum
+    - criado_em : DateTime
+    --
+    + registar() : void
+  }
+
+  class AuthController {
+    + getLogin(req, res) : void
+    + postLogin(req, res) : void
+    + postLogout(req, res) : void
+    + getRecuperar(req, res) : void
+    + postRecuperar(req, res) : void
+    + getReset(req, res) : void
+    + postReset(req, res) : void
+  }
+
+  class UtilizadoresController {
+    + listar(req, res) : void
+    + getNovo(req, res) : void
+    + postNovo(req, res) : void
+    + getEditar(req, res) : void
+    + postEditar(req, res) : void
+    + desativar(req, res) : void
+    + desbloquear(req, res) : void
+    + resetPasswordAdmin(req, res) : void
+    + getLogs(req, res) : void
+  }
+
+  class AuthMiddleware {
+    + autenticado(req, res, next) : void
+    + apenasAdmin(req, res, next) : void
+    + permitir(perfis: String[]) : Function
+    + injetarUtilizador(req, res, next) : void
+  }
+
+  class Sessao {
+    - utilizador_id : Integer
+    - nome : String
+    - email : String
+    - perfil : PerfilEnum
+    - divisao : String
+    - criado_em : DateTime
+    --
+    + iniciar(utilizador: Utilizador) : void
+    + terminar() : void
+    + isValida() : Boolean
+  }
+
+  enum PerfilEnum {
+    ADMINISTRADOR
+    GESTOR_ASSOCIADOS
+    GESTOR_FINANCEIRO
+    GESTOR_ATIVIDADES
+    DIRECAO
+    ASSOCIADO
+  }
+
+  enum EstadoEnum {
+    ATIVO
+    INATIVO
+    BLOQUEADO
+    PENDENTE
+  }
+
+  enum ResultadoEnum {
+    SUCESSO
+    FALHA
+  }
+}
+
+' ─── Relações ───────────────────────────────
+
+Utilizador "1" --> "0..*" LogAuditoria : gera >
+Utilizador --> PerfilEnum : usa >
+Utilizador --> EstadoEnum : usa >
+LogAuditoria --> ResultadoEnum : usa >
+
+AuthController ..> Utilizador       : «use»
+AuthController ..> LogAuditoria     : «use»
+AuthController ..> Sessao           : «use»
+
+UtilizadoresController ..> Utilizador   : «use»
+UtilizadoresController ..> LogAuditoria : «use»
+
+AuthMiddleware ..> Sessao : «use»
+AuthMiddleware ..> PerfilEnum : «use»
+
+AuthController ..> AuthMiddleware : «use»
+UtilizadoresController ..> AuthMiddleware : «use»
+
+@enduml
