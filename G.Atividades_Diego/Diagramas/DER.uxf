@@ -1,0 +1,46 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>520</x><y>0</y><w>210</w><h>130</h></coordinates><panel_attributes>Atividade
+--
+idatividade : INT
+--
+titulo : VARCHAR
+    descricao : TEXT
+    data : DATE
+    preco : DECIMAL
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>0</y><w>210</w><h>110</h></coordinates><panel_attributes>Associado
+--
+ idAssociado : INT
+--
+nome : VARCHAR
+    email : VARCHAR</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>210</y><w>210</w><h>110</h></coordinates><panel_attributes>Associado
+--
+idInscricao : INT
+--
+idAssociado : INT
+    idAtividade : INT
+    estado : VARCHAR</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>100</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0
+</panel_attributes><additional_attributes>10;10;160;110</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>120</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0
+</panel_attributes><additional_attributes>120;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>410</y><w>210</w><h>110</h></coordinates><panel_attributes>Pagamento
+--
+idPagamento : INT
+
+--
+  idInscricao : INT
+    valor : DECIMAL
+    dataPagamento : DATE</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>310</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>510</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>610</y><w>210</w><h>90</h></coordinates><panel_attributes>Recibo
+--
+idRecibo : INT
+--
+   idPagamento : INT
+    dataEmissao : DATE</panel_attributes><additional_attributes></additional_attributes></element></diagram>
