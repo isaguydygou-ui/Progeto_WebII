@@ -1,0 +1,33 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>126</x><y>238</y><w>112</w><h>35</h></coordinates><panel_attributes>«module»           
+Portal Público
+Formulário de subscrição. </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>119</x><y>175</y><w>455</w><h>336</h></coordinates><panel_attributes>processo1
+
+Admissão e Gestão de Associados</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>280</x><y>238</y><w>119</w><h>42</h></coordinates><panel_attributes>«module»           
+Gestão de Candidaturas     
+Aprovação / Rejeição  
+Análise de subscrições          </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>231</x><y>238</y><w>63</w><h>28</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;usa&gt;&gt;</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>427</x><y>238</y><w>112</w><h>35</h></coordinates><panel_attributes>«module»           
+Gestão de Candidaturas    
+Aprovação / Rejeição  
+Análise de subscrições </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>126</x><y>315</y><w>112</w><h>49</h></coordinates><panel_attributes>«module»           
+Cadastro de Associados    
+Pessoa Física / Jurídica
+Registo e perfi
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>126</x><y>406</y><w>105</w><h>56</h></coordinates><panel_attributes>«module»           
+Portal do Associado
+Acesso após aprovação   
+Consulta estado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>287</x><y>315</y><w>98</w><h>49</h></coordinates><panel_attributes>«service»
+Motor de Workflow
+Gestão de estados
+Histórico de transições</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>693</x><y>217</y><w>63</w><h>35</h></coordinates><panel_attributes>«service»
+Notificações
+E-mail / Portal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>693</x><y>294</y><w>70</w><h>35</h></coordinates><panel_attributes>«service»
+Auth
+Autenticação     </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>686</x><y>385</y><w>77</w><h>35</h></coordinates><panel_attributes>«service»
+Log Auditoria
+Registo de ações </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>224</x><y>308</y><w>483</w><h>140</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;access&gt;&gt;</panel_attributes><additional_attributes>10;180;670;10</additional_attributes></element><element><id>Relation</id><coordinates><x>231</x><y>322</y><w>70</w><h>28</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;usa&gt;&gt;</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>532</x><y>231</y><w>175</w><h>42</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;usa&gt;&gt;</panel_attributes><additional_attributes>10;40;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>329</y><w>322</w><h>84</h></coordinates><panel_attributes>lt=.&gt;
+                                                &lt;&lt;registra&gt;&gt;</panel_attributes><additional_attributes>10;10;440;100</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>672</x><y>189</y><w>119</w><h>329</h></coordinates><panel_attributes>«shared services»                   </panel_attributes><additional_attributes></additional_attributes></element></diagram>
